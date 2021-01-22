@@ -24,7 +24,7 @@ class SlashRemoveMiddlewareServiceProvider extends ServiceProvider
     public function register(): void
     {
         $kernel = $this->app->make(Kernel::class);
-        $kernel->pushMiddleware(SlashRemoveMiddleware::class);
+        $kernel->pushMiddleware(\Aurawindsurfing\SlashRemoveMiddleware\Http\Middleware\SlashRemoveMiddleware::class);
     }
 
     /**

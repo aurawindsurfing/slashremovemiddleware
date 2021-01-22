@@ -1,6 +1,6 @@
 <?php
 
-namespace Aurawindsurfing\SlashRemoveMiddleware;
+namespace Aurawindsurfing\SlashRemoveMiddleware\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Redirect;

@@ -3,11 +3,24 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
 It is important to remove trailing slashed from applications made with laravel and it is bad for SEO as Google registers page twice, once with slash and once without it. The correct behaviour is to create 301 for ever page with trailing slash to avoid content duplication in search results.
 
 Here is the source: https://developers.google.com/search/blog/2010/04/to-slash-or-not-to-slash
+
+## Before you start
+
+An easy way to check if your app is behaving properly would be to create a test route in ``routes/web.php`` like this:
+
+```
+Route::get('/foobar', function () {
+    return 'This is not good!';
+});
+```
+
+Then visit this endpoint with trailing slash ``yourapp.test/foobar/``
+
+If "This is not good!" was displayed and trailing slash did not dissapear from your url in the browser then Google will not be happy about it.
 
 ## Installation
 
@@ -18,6 +31,12 @@ $ composer require aurawindsurfing/slashremovemiddleware
 ```
 
 ## Usage
+
+This package will auto register itself in Laravel 6 and higher.
+
+Now repeat the same test and you should be redirected to the same url but without trailing slash ``yourapp.test/foobar`` and see the same text.
+
+Now Google will not index every single page of your app twice.
 
 ## Change log
 
