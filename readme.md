@@ -4,23 +4,23 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 
-It is important to remove trailing slashed from applications made with laravel and it is bad for SEO as Google registers page twice, once with slash and once without it. The correct behaviour is to create 301 for ever page with trailing slash to avoid content duplication in search results.
+It is important to remove trailing slashed from applications made with laravel and it is bad for SEO as Google will index your page twice, once with slash and once without it. The correct behaviour is to create 301 for ever page with trailing slash to avoid content duplication in search results.
 
 Here is the source: https://developers.google.com/search/blog/2010/04/to-slash-or-not-to-slash
 
 ## Before you start
 
-An easy way to check if your app is behaving properly would be to create a test route in ``routes/web.php`` like this:
+An easy way to check if your app is behaving properly is to create a test route in ``routes/web.php`` like this:
 
 ```
 Route::get('/foobar', function () {
-    return 'This is not good!';
+    return 'simple test';
 });
 ```
 
 Then visit this endpoint with trailing slash ``yourapp.test/foobar/``
 
-If "This is not good!" was displayed and trailing slash did not dissapear from your url in the browser then Google will not be happy about it.
+If "simple test" was displayed and trailing slash did not dissapear from your url in the browser window then Google will not be happy about it and you need to fix it.
 
 ## Installation
 
@@ -34,9 +34,11 @@ $ composer require aurawindsurfing/slashremovemiddleware
 
 This package will auto register itself in Laravel 6 and higher.
 
-Now repeat the same test and you should be redirected to the same url but without trailing slash ``yourapp.test/foobar`` and see the same text.
+Now repeat the same test.
 
-Now Google will not index every single page of your app twice.
+You should be redirected to the same url but without trailing slash ``yourapp.test/foobar`` and see the same text.
+
+Now Google will only index every page once.
 
 ## Change log
 
