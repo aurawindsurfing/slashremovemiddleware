@@ -1,6 +1,6 @@
 {
     "name": "aurawindsurfing/slashremovemiddleware",
-    "description": "This package adds 301 rdirect to all routes with trailing slashes.",
+    "description": "This package adds 301 redirect to all routes with trailing slashes.",
     "license": "MIT",
     "authors": [
         {
