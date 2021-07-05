@@ -27,7 +27,7 @@ If "simple test" was displayed and trailing slash did not dissapear from your ur
 Via Composer
 
 ``` bash
-$ composer require aurawindsurfing/slashremovemiddleware
+composer require aurawindsurfing/slashremovemiddleware
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ Please see the [changelog](changelog.md) for more information on what has change
 ## Testing
 
 ``` bash
-$ composer test
+composer test
 ```
 
 ## Contributing
