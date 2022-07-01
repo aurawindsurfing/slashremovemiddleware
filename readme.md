@@ -1,8 +1,6 @@
 # SlashRemoveMiddleware
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
+[![Latest Stable Version](http://poser.pugx.org/aurawindsurfing/slashremovemiddleware/v)](https://packagist.org/packages/aurawindsurfing/slashremovemiddleware) [![Total Downloads](http://poser.pugx.org/aurawindsurfing/slashremovemiddleware/downloads)](https://packagist.org/packages/aurawindsurfing/slashremovemiddleware) [![Latest Unstable Version](http://poser.pugx.org/aurawindsurfing/slashremovemiddleware/v/unstable)](https://packagist.org/packages/aurawindsurfing/slashremovemiddleware) [![License](http://poser.pugx.org/aurawindsurfing/slashremovemiddleware/license)](https://packagist.org/packages/aurawindsurfing/slashremovemiddleware) [![PHP Version Require](http://poser.pugx.org/aurawindsurfing/slashremovemiddleware/require/php)](https://packagist.org/packages/aurawindsurfing/slashremovemiddleware)
 
 It is important to remove trailing slashed from applications made with laravel and it is bad for SEO as Google will index your page twice, once with slash and once without it. The correct behaviour is to create 301 for ever page with trailing slash to avoid content duplication in search results.
 
